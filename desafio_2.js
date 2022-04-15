@@ -22,15 +22,35 @@ function transformarfahrenheit() {
 
 /* Segunda maneira : usando uma função */
 
-/*  
-function transformarGraus(graus) {
-
+ 
+function transformarGraus() {
+    alert('Para converter insira o número seguido de F caso for fahrenheit ou C caso for celsius. Ex: 50C ')
+    graus = prompt('Insira um número:')
     let grausFahrenheit = graus.toUpperCase().includes('F')
     let grausCelsius = graus.toUpperCase().includes('C')
 
     if (!grausFahrenheit && !grausCelsius) {
         throw new Error('Grau não identificado')
     }
+
+    /* convertendo de Fahrenheit para Celsius */
+    let grauAtualizado = Number(graus.toUpperCase().replace('F',''));
+    let formula = (fahrenheit) => (fahrenheit - 32) * 5/9
+    let sinal = 'C'
+
+    /* convertendo de Celsius para fahrenheit */
+    
+    if (grausCelsius) {
+        
+        grauAtualizado = Number(graus.toUpperCase().replace('C',''));
+        formula = (celsius) =>  celsius * 9/5 + 32
+        sinal = 'F' 
+
+        
+    }
+
+    console.log(formula(grauAtualizado) + sinal) 
+    
+    
     
 }
-      */ 

@@ -57,5 +57,3 @@ function calcular_receita() {
 
 }
 
-/*Chamando a função*/
-calcular_receita()
