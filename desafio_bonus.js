@@ -79,3 +79,6 @@ console.log(students)
 */
 
 // Será impresso 'undefined', pois a variável so foi definida após. 
+
+
+
